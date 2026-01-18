@@ -1,1 +1,10 @@
+text
+
+- id: "questionnaire_Created_date"
+  label: "Date"
+  canvas_model: "QuestionnaireResponse"
+  canvas_field: "lastUpdated"
+  comment: "Added into the questionnaire metadata when you create a quesitonnaire, meta.lastUpdated would be FHIR standard"
+
+
 
