@@ -1,0 +1,55 @@
+text
+protocol_name: "Sarc-F"
+paper_form_file: "questionnaires/source/protocol-1.pdf"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "SARC-F"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/16jWRfCoOlA7XPhQxv5g-e-8aojp12nTBuiHNgB0x-vU/edit?gid=0#gid=0"
+  google_sheet_tab: "SARC-F"
+
+profile_fields:
+  - paper_label: "Name"
+    canonical_field_id: "patient.full_name"
+    canvas_model: "Patient"
+    canvas_field: "full_name"
+    existing_field: true
+    notes: "Prefilled from patient profile; not asked in questionnaire."
+
+  - paper_label: "Date"
+    canonical_field_id: "patient.address_home"
+    canvas_model: "Patient"
+    canvas_field: "address"
+    existing_field: true
+    notes: "Standard address field; reused in other protocols."
+
+questionnaire_fields:
+  - paper_label: "Primary Concern Today"
+    question_code: "PRIM_CONCERN"
+    google_sheet_tab: "PROTOCOL_1"
+    google_sheet_row: 12
+    response_type: "string"
+    canonical_field_id: "protocol1.primary_concern"
+
+  - paper_label: "Pain Level (0–10)"
+    question_code: "PAIN_SCORE"
+    google_sheet_tab: "PROTOCOL_1"
+    google_sheet_row: 18
+    response_type: "integer"
+    canonical_field_id: "protocol1.pain_score"
+
+api_targets:
+  - paper_label: "Primary Concern Today"
+    questionnaire_code: "protocol_1_intake"
+    question_code: "PRIM_CONCERN"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "item[].answer[0].valueString"
+
+  - paper_label: "Pain Level (0–10)"
+    questionnaire_code: "protocol_1_intake"
+    question_code: "PAIN_SCORE"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "item[].answer[0].valueInteger"
