@@ -20,26 +20,19 @@ profile_fields:
     notes: "Prefilled from patient profile; not asked in questionnaire."
 
   - paper_label: "Date"
-    canonical_field_id: "patient.address_home"
-    canvas_model: "Patient"
+    canonical_field_id: "Questionnaire_Created_Date"
+    canvas_model: "QuestionnaireResponse"
     canvas_field: "address"
     existing_field: true
     notes: "Standard address field; reused in other protocols."
 
 questionnaire_fields:
-  - paper_label: "Primary Concern Today"
-    question_code: "PRIM_CONCERN"
-    google_sheet_tab: "PROTOCOL_1"
-    google_sheet_row: 12
+  - paper_label: "Strength - How much difficulty do you have in lifting and carrying 10 pounds?"
+    question_code: "Strength"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 6
     response_type: "string"
-    canonical_field_id: "protocol1.primary_concern"
-
-  - paper_label: "Pain Level (0–10)"
-    question_code: "PAIN_SCORE"
-    google_sheet_tab: "PROTOCOL_1"
-    google_sheet_row: 18
-    response_type: "integer"
-    canonical_field_id: "protocol1.pain_score"
+    canonical_field_id: ""
 
 api_targets:
   - paper_label: "Primary Concern Today"
