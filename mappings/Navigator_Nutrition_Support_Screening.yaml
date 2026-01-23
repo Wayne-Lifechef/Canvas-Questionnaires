@@ -41,7 +41,37 @@ profile_fields:
     canvas_model: "Patient"
     canvas_field: "Phone Numbers"
     existing_field: true
+    
+  - paper_label: "Street Address"
+    canonical_field_id: "patient.address.1"
+    canvas_model: "Patient"
+    canvas_field: "Address Line 1"
+    existing_field: true
 
+  - paper_label: "Street Address Line 2"
+    canonical_field_id: "patient.address.2"
+    canvas_model: "Patient"
+    canvas_field: "Address Line 1"
+    existing_field: true
+    
+  - paper_label: "City"
+    canonical_field_id: "patient.city"
+    canvas_model: "Patient"
+    canvas_field: "City"
+    existing_field: true
+    
+  - paper_label: "State/Province"
+    canonical_field_id: "patient.State"
+    canvas_model: "Patient"
+    canvas_field: "State"
+    existing_field: true
+
+  - paper_label: "Zip code"
+    canonical_field_id: "patient.address.2"
+    canvas_model: "Patient"
+    canvas_field: "Address Line 1"
+    existing_field: true
+    
 questionnaire_fields:
   - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
     question_code: "NNSS_primary_90d"
@@ -57,8 +87,3 @@ api_targets:
     api_model: "QuestionnaireResponse"
     api_field_path: "linkID: NNSS_primary_90d"
 
-  - paper_label: "Pain Level (0–10)"
-    questionnaire_code: "protocol_1_intake"
-    question_code: "PAIN_SCORE"
-    api_model: "QuestionnaireResponse"
-    api_field_path: "item[].answer[0].valueInteger"
