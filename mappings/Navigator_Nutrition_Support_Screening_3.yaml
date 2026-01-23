@@ -1,0 +1,67 @@
+
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_3.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+
+profile_fields:
+  - paper_label: "Emergency Contact (if different than caregiver) First Name"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Name"
+    existing_field: true
+    #concatenate First and Last Name for entry into "Name"
+
+  - paper_label: "Emergency Contact (if different than caregiver) Last Name"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Name"
+    existing_field: true
+
+  - paper_label: "Emergency Contact, Role"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Comments"
+    existing_field: true
+
+  - paper_label: "Emergency Contact, Phone(primary)"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Phone Number"
+    existing_field: true
+
+  - paper_label: "Emergency Contact, Phone(backup)"
+    canonical_field_id: ""
+    canvas_model: "Patient.communication"
+    canvas_field: "Comments"
+    existing_field: true    
+
+  - paper_label: "Emergency Contact, Email"
+    canonical_field_id: ""
+    canvas_model: "Patient.communication"
+    canvas_field: "Email"
+    existing_field: true  
+
+questionnaire_fields:
+  - paper_label: "Is this your emergency contact?"
+    question_code: "NNSS_caregiver_is_emergencycontact"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 20
+    response_type: "SING"
+    canonical_field_id: ""
+    
+api_targets:
+  - paper_label: "Is this your emergency contact?"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_caregiver_is_emergencycontact"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_caregiver_is_emergencycontact"
+
