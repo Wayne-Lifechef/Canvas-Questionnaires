@@ -67,9 +67,9 @@ profile_fields:
     existing_field: true
 
   - paper_label: "Zip code"
-    canonical_field_id: "patient.address.2"
+    canonical_field_id: "patient.zip"
     canvas_model: "Patient"
-    canvas_field: "Address Line 1"
+    canvas_field: "zip code"
     existing_field: true
     
 questionnaire_fields:
