@@ -13,11 +13,42 @@ canvas_questionnaire:
   google_sheet_tab: "ques_navigator_nutrition_support_screening"
 
 profile_fields:
+  - paper_label: "MRN(if known)"
+    canonical_field_id: ""
+    canvas_model: "Patient.identifier"
+    canvas_field: "MRN"
+    existing_field: true
+    
   - paper_label: "Preferred Language"
-    canonical_field_id: "patient.language"
+    canonical_field_id: ""
     canvas_model: "Patient.communication"
     canvas_field: "language"
     existing_field: true
+
+  - paper_label: "Caregiver First Name"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Name"
+    existing_field: true
+    #concatenate First and Last Name for entry into "Name"
+
+  - paper_label: "Caregiver Last Name"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Name"
+    existing_field: true
+
+  - paper_label: "Caregiver Mobile Phone Number"
+    canonical_field_id: ""
+    canvas_model: "Patient"
+    canvas_field: "language"
+    existing_field: true
+
+  - paper_label: "Caregiver Email"
+    canonical_field_id: ""
+    canvas_model: "Patient.communication"
+    canvas_field: "language"
+    existing_field: true    
 
 questionnaire_fields:
   - paper_label: "Internet connection at physical address"
@@ -25,32 +56,37 @@ questionnaire_fields:
     google_sheet_tab: "ques_navigator_nutrition_support_screening"
     google_sheet_row: 9
     response_type: "SING"
-    canonical_field_id: "patient.internet"
+    canonical_field_id: ""
     
-questionnaire_fields:
   - paper_label: "Microwave at physical address"
     question_code: "NNSS_microwave"
     google_sheet_tab: "ques_navigator_nutrition_support_screening"
     google_sheet_row: 12
     response_type: "SING"
-    canonical_field_id: "patient.microwave"
+    canonical_field_id: ""
 
-questionnaire_fields:
   - paper_label: "Do you live alone?"
     question_code: "NNSS_live_alone"
     google_sheet_tab: "ques_navigator_nutrition_support_screening"
     google_sheet_row: 17
     response_type: "SING"
-    canonical_field_id: "patient.microwave"
-
-
-
-
-
+    canonical_field_id: ""
     
 api_targets:
-  - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
+  - paper_label: "Internet connection at physical address"
     questionnaire_code: "NNSS"
-    question_code: "NNSS_primary_90d"
+    question_code: "NNSS_internet"
     api_model: "QuestionnaireResponse"
-    api_field_path: "linkID: NNSS_primary_90d"
+    api_field_path: "linkID: NSS_internet"
+
+  - paper_label: "Microwave at physical address"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_microwave"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_microwave"
+    
+  - paper_label: "Do you live alone?"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_live_alone"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_live_alone" 
