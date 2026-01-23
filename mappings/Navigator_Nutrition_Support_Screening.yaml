@@ -13,61 +13,61 @@ canvas_questionnaire:
 
 profile_fields:
   - paper_label: "First Name"
-    canonical_field_id: "patient.first_name"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "First name"
     existing_field: true
 
   - paper_label: "Last Name"
-    canonical_field_id: "patient.last_name"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "Last name"
     existing_field: true
 
   - paper_label: "Date of Birth"
-    canonical_field_id: "patient.date_of_birth"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "Date of Birth"
     existing_field: true
          
   - paper_label: "Email"
-    canonical_field_id: "patient.email"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "Email"
     existing_field: true
     
   - paper_label: "Mobile Phone Number"
-    canonical_field_id: "patient.cell"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "Phone Numbers"
     existing_field: true
     
   - paper_label: "Street Address"
-    canonical_field_id: "patient.address.1"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "Address Line 1"
     existing_field: true
 
   - paper_label: "Street Address Line 2"
-    canonical_field_id: "patient.address.2"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "Address Line 1"
     existing_field: true
     
   - paper_label: "City"
-    canonical_field_id: "patient.city"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "City"
     existing_field: true
     
   - paper_label: "State/Province"
-    canonical_field_id: "patient.State"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "State"
     existing_field: true
 
   - paper_label: "Zip code"
-    canonical_field_id: "patient.zip"
+    canonical_field_id: ""
     canvas_model: "Patient"
     canvas_field: "zip code"
     existing_field: true
