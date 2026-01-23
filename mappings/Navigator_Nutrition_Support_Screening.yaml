@@ -1,0 +1,64 @@
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_1.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+
+profile_fields:
+  - paper_label: "First Name"
+    canonical_field_id: "patient.first_name"
+    canvas_model: "Patient"
+    canvas_field: "First name"
+    existing_field: true
+
+  - paper_label: "Last Name"
+    canonical_field_id: "patient.last_name"
+    canvas_model: "Patient"
+    canvas_field: "Last name"
+    existing_field: true
+
+  - paper_label: "Date of Birth"
+    canonical_field_id: "patient.date_of_birth"
+    canvas_model: "Patient"
+    canvas_field: "Date of Birth"
+    existing_field: true
+         
+  - paper_label: "Email"
+    canonical_field_id: "patient.email"
+    canvas_model: "Patient"
+    canvas_field: "Email"
+    existing_field: true
+    
+  - paper_label: "Mobile Phone Number"
+    canonical_field_id: "patient.cell"
+    canvas_model: "Patient"
+    canvas_field: "Phone Numbers"
+    existing_field: true
+
+questionnaire_fields:
+  - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
+    question_code: "NNSS_primary_90d"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 6
+    response_type: "SING"
+    canonical_field_id: ""
+
+api_targets:
+  - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_primary_90d"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_primary_90d"
+
+  - paper_label: "Pain Level (0–10)"
+    questionnaire_code: "protocol_1_intake"
+    question_code: "PAIN_SCORE"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "item[].answer[0].valueInteger"
