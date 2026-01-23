@@ -1,0 +1,56 @@
+
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_2.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+
+profile_fields:
+  - paper_label: "Preferred Language"
+    canonical_field_id: "patient.language"
+    canvas_model: "Patient.communication"
+    canvas_field: "language"
+    existing_field: true
+
+questionnaire_fields:
+  - paper_label: "Internet connection at physical address"
+    question_code: "NNSS_internet"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 9
+    response_type: "SING"
+    canonical_field_id: "patient.internet"
+    
+questionnaire_fields:
+  - paper_label: "Microwave at physical address"
+    question_code: "NNSS_microwave"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 12
+    response_type: "SING"
+    canonical_field_id: "patient.microwave"
+
+questionnaire_fields:
+  - paper_label: "Do you live alone?"
+    question_code: "NNSS_live_alone"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 17
+    response_type: "SING"
+    canonical_field_id: "patient.microwave"
+
+
+
+
+
+    
+api_targets:
+  - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_primary_90d"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_primary_90d"
