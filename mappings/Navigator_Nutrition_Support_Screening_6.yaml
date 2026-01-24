@@ -1,0 +1,33 @@
+
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_6.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+  
+# all other fields on this page are attached to the signed consent form which will be stored in a PDF of this form in the medical record
+questionnaire_fields:
+  - paper_label: "Super Consent Signature Date"
+    question_code: "NNSS_super_consent_signature_date"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 49
+    response_type: "TXT"
+    canonical_field_id: ""
+
+api_targets:
+  - paper_label: "Super Consent Signature Date"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_super_consent_signature_date"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_super_consent_signature_date"
+
+ 
+    
+    
