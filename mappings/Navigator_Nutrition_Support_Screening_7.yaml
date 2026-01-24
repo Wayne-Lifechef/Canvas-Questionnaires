@@ -1,0 +1,104 @@
+
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_7.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+
+questionnaire_fields:
+  - paper_label: "RPM / Escalation Contact"
+    question_code: "NNSS_escalation_contact"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 51
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+  - paper_label: "Remote Patient Monitoring (RPM)"
+    question_code: "NNSS_remote_patient_monitoring"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 53
+    response_type: "SING"
+    canonical_field_id: ""
+
+  - paper_label: "if Pending, provide reason"
+    question_code: "NNSS_enrollment_pending_reason"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 57
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "RPM Modalities"
+    question_code: "NNSS_rpm_modalities"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 59
+    response_type: "MULT"
+    canonical_field_id: ""
+
+  - paper_label: "RPM Vendor / Platform"
+    question_code: "NNSS_rpm_vendor"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 63
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Assigned Navigator"
+    question_code: "NNSS_assigned_navigator"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 65
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+  - paper_label: "Assigned RD"
+    question_code: "NNSS_assigned_rd"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 67
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+api_targets:
+  - paper_label: "RPM / Escalation Contact"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_escalation_contact"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_escalation_contact"
+
+  - paper_label: "Fluid Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_fluid_restriction"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_fluid_restriction"
+
+  - paper_label: "Exact Fluid Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_fluid_exact"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_fluid_exact"
+
+  - paper_label: "Lifting Weight Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_lifting_weight_restriction"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_lifting_weight_restriction"
+
+  - paper_label: "Exact Weight Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_exact_weight_restriction"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_exact_weight_restriction"
+
+  - paper_label: "Plan for Receiving Meal Delivery"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_plan_for_delivery"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_plan_for_delivery"
+
+
+    
+    
