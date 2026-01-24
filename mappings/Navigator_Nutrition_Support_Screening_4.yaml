@@ -1,0 +1,87 @@
+
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_4.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+
+questionnaire_fields:
+  - paper_label: "Social Risk Factors"
+    question_code: "NNSS_social_risk_factors"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 23
+    response_type: "MULT"
+    canonical_field_id: ""
+    
+  - paper_label: "Functional Risk Factors"
+    question_code: "NNSS_functional_risk"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 27
+    response_type: "MULT"
+    canonical_field_id: ""
+    # used MULT to leave room for additional Functional factors to be added later
+
+  - paper_label: "Food Insecurity Result"
+    question_code: "NNSS_food_Insecurity"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 29
+    response_type: "SING"
+    canonical_field_id: ""
+
+  - paper_label: "Sarcopenia Risk Score"
+    question_code: "NNSS_saracopenia"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 32
+    response_type: "SING"
+    canonical_field_id: ""
+
+  - paper_label: "Date Screened"
+    question_code: "NNSS_date_screened"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 35
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+api_targets:
+  - paper_label: "Social Risk Factors"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_social_risk_factors"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_social_risk_factors"
+
+  - paper_label: "Functional Risk Factors"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_functional_risk"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_functional_risk"
+
+  - paper_label: "Food Insecurity Result"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_food_Insecurity"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_food_Insecurity"
+
+  - paper_label: "Food Insecurity Result"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_saracopenia"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_saracopenia"
+
+  - paper_label: "Date Screened"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_date_screened"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_date_screened"
+    # suggested format to match Canvas internally:   YYYY-MM-DD
+
+
+
+    
+    
