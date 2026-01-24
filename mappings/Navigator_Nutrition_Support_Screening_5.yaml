@@ -1,0 +1,105 @@
+
+text
+protocol_name: "Navigator_Nutrition_Support_Screening"
+paper_form_file: "Navigator_Nutrition_Suppport_Screening/Navigator_Nutrition_Suppport_Screening_5.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "Navigator_Nutrition_Suppport_Screening"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=333619948#gid=333619948"
+  google_sheet_tab: "ques_navigator_nutrition_support_screening"
+
+profile_fields:
+  - paper_label: "Specific Allergy"
+    canonical_field_id: ""
+    canvas_model: "AllergyIntolerance"
+    canvas_field: "Name"
+    existing_field: true
+
+questionnaire_fields:
+  - paper_label: "Fluid Restriction"
+    question_code: "NNSS_fluid_restriction"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 37
+    response_type: "SING"
+    canonical_field_id: ""
+    
+  - paper_label: "Exact Fluid Restriction"
+    question_code: "NNSS_fluid_exact"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 40
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Food Allergies"
+    question_code: ""
+    google_sheet_tab: ""
+    google_sheet_row: 
+    response_type: ""
+    canonical_field_id: ""
+    # the specific Allergy section in profile fields above is where allergies are stored.. yes/no has no value in the Record.
+
+  - paper_label: "Lifting Weight Restriction"
+    question_code: "NNSS_lifting_weight_restriction"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 42
+    response_type: "SING"
+    canonical_field_id: ""
+
+  - paper_label: "Exact Weight Restriction"
+    question_code: "NNSS_exact_weight_restriction"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 45
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Plan for Receiving Meal Delivery"
+    question_code: "NNSS_plan_for_delivery"
+    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+    google_sheet_row: 47
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+api_targets:
+  - paper_label: "Specific Allergy"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_social_risk_factors"
+    api_model: "AllergyIntolerance"
+    api_field_path: "linkID: NNSS_social_risk_factors"
+
+  - paper_label: "Fluid Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_fluid_restriction"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_fluid_restriction"
+
+  - paper_label: "Exact Fluid Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_fluid_exact"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_fluid_exact"
+
+  - paper_label: "Lifting Weight Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_lifting_weight_restriction"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_lifting_weight_restriction"
+
+  - paper_label: "Exact Weight Restriction"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_exact_weight_restriction"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_exact_weight_restriction"
+
+  - paper_label: "Plan for Receiving Meal Delivery"
+    questionnaire_code: "NNSS"
+    question_code: "NNSS_plan_for_delivery"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: NNSS_plan_for_delivery"
+
+
+    
+    
