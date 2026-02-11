@@ -1,6 +1,6 @@
 text
-protocol_name: "Sarc-F"
-paper_form_file: "questionnaires/source/protocol-1.pdf"
+protocol_name: "SARC-F"
+paper_form_file: "SARC-F/ques_SARC-F.pdf"
 
 status:
   in_canvas: true         # set to true when loaded/configured in Canvas
@@ -24,25 +24,56 @@ profile_fields:
     canvas_model: "QuestionnaireResponse"
     canvas_field: "address"
     existing_field: true
-    notes: "Standard address field; reused in other protocols."
+    notes: "Date field part of the questionnaire metadata when created"
 
 questionnaire_fields:
   - paper_label: "Strength - How much difficulty do you have in lifting and carrying 10 pounds?"
     question_code: "Strength"
     google_sheet_tab: "ques_SARC-F"
     google_sheet_row: 6
-    response_type: "string"
+    response_type: "SING"
+    canonical_field_id: ""
+    
+  - paper_label: "Walking - How much difficulty do you have walking across a room?"
+    question_code: "Walking"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 10
+    response_type: "SING"
     canonical_field_id: ""
 
-api_targets:
-  - paper_label: "Primary Concern Today"
-    questionnaire_code: "protocol_1_intake"
-    question_code: "PRIM_CONCERN"
-    api_model: "QuestionnaireResponse"
-    api_field_path: "item[].answer[0].valueString"
+    - paper_label: "How much difficulty do you have transferring from a chair or bed?"
+    question_code: "Transferring"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 14
+    response_type: "SING"
+    canonical_field_id: ""
+    
+    - paper_label: "Climbing - How much difficulty do you have climbing a flight of 10 stairs?"
+    question_code: "Stairs"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 18
+    response_type: "SING"
+    canonical_field_id: ""
+  
+    - paper_label: "Falls - How many times have you fallen in the past year?"
+    question_code: "Falls"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 22
+    response_type: "SING"
+    canonical_field_id: ""
+  
+    - paper_label: "TOTAL SCORE: => 4 is predictive of sarcopenia and poor outcomes."
+    question_code: "Score"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 26
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+  - paper_label: "Assessed by"
+    question_code: "Sarc-F_assessed_by"
+    google_sheet_tab: "ques_SARC-F"
+    google_sheet_row: 28
+    response_type: "TXT"
+    canonical_field_id: ""
 
-  - paper_label: "Pain Level (0–10)"
-    questionnaire_code: "protocol_1_intake"
-    question_code: "PAIN_SCORE"
-    api_model: "QuestionnaireResponse"
-    api_field_path: "item[].answer[0].valueInteger"
+  
