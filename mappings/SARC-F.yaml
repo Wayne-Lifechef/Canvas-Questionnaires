@@ -8,7 +8,7 @@ status:
 
 canvas_questionnaire:
   name: "SARC-F"
-  google_sheet_url: "https://docs.google.com/spreadsheets/d/16jWRfCoOlA7XPhQxv5g-e-8aojp12nTBuiHNgB0x-vU/edit?gid=0#gid=0"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=347953653#gid=347953653"
   google_sheet_tab: "ques_SARC-F"
 
 profile_fields:
