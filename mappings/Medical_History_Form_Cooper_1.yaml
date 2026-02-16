@@ -62,3 +62,10 @@ questionnaire_fields:
     google_sheet_row: 6
     response_type: "TXT"
     canonical_field_id: ""
+
+api_targets:
+  - paper_label: "What sex were you assigned at birth? (Used for Medical Care)"
+    questionnaire_code: "AMH_C"
+    question_code: "AMH_C_sex_at_birth"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_sex_at_birth"
