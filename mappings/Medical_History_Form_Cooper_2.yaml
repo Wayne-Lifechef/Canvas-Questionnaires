@@ -1,0 +1,52 @@
+text
+protocol_name: "Abbreviated_Medical_History_Cooper"
+paper_form_file: "AMH_Cooper_pg2.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "abbreviated_medical_history_cooper"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=2068786332#gid=2068786332"
+  google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+ 
+questionnaire_fields:
+  - paper_label: "Personal Health History (select all that apply)"
+    question_code: "AMH_C_health_history"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 9
+    response_type: "MULT"
+    canonical_field_id: ""
+ 
+questionnaire_fields:
+  - paper_label: "Other"
+    question_code: "AMH_C_other"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 31
+    response_type: "MULT"
+    canonical_field_id: ""
+  
+questionnaire_fields:
+  - paper_label: "Date of last physical exam"
+    question_code: "AMH_C_last_exam"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 33
+    response_type: "TXT"
+    canonical_field_id: ""
+  
+questionnaire_fields:
+  - paper_label: "Primary Care Physician"
+    question_code: "AMH_C_pcp"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 35
+    response_type: "TXT"
+    canonical_field_id: ""
+    
+questionnaire_fields:
+  - paper_label: "Fluid Restriction Physician Recommendations"
+    question_code: "AMH_C_fluid_restrictions"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 37
+    response_type: "TXT"
+    canonical_field_id: ""
