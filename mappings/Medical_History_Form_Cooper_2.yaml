@@ -50,3 +50,40 @@ questionnaire_fields:
     google_sheet_row: 37
     response_type: "TXT"
     canonical_field_id: ""
+
+api_targets:
+  - paper_label: "Personal Health History (select all that apply)"
+    questionnaire_code: "AMH_C"
+    question_code: "AMH_C_health_history"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_health_history"
+
+api_targets:
+  - paper_label: "Other"
+    questionnaire_code: AMH_C"
+    question_code: "AMH_C_other"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_other"
+
+api_targets:
+  - paper_label: "Date of last physical exam"
+    questionnaire_code: "AMH_C"
+    question_code: "AMH_C_last_exam"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_last_exam"
+
+api_targets:
+  - paper_label: "Primary Care Physician"
+    questionnaire_code: "AMH_C"
+    question_code: "AAMH_C_pcp"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_pcp"
+
+api_targets:
+  - paper_label: "Fluid Restriction Physician Recommendations"
+    questionnaire_code: "AMH_C"
+    question_code: "AMH_C_fluid_restrictions"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_fluid_restrictions"
+
+
