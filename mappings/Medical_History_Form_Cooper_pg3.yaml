@@ -1,0 +1,71 @@
+text
+protocol_name: "Abbreviated_Medical_History_Cooper"
+paper_form_file: "AMH_Cooper_pg3.png"
+
+status:
+  in_canvas: true         # set to true when loaded/configured in Canvas
+  in_mip: false           # set to true when MIP side is wired
+
+canvas_questionnaire:
+  name: "abbreviated_medical_history_cooper"
+  google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=2068786332#gid=2068786332"
+  google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+  
+profile_fields:
+  - paper_label: "Current Medications"
+    canonical_field_id: ""
+    canvas_model: "MedicationStatement"
+    canvas_field: "First name"
+    existing_field: true
+    
+profile_fields:
+  - paper_label: "Current Supplements"
+    canonical_field_id: ""
+    canvas_model: "MedicationStatement"
+    canvas_field: "First name"
+    existing_field: true
+ 
+questionnaire_fields:
+  - paper_label: "Recommended Dietary Guidelines"
+    question_code: "AMH_C_dietary_guidelines"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 39
+    response_type: "TXT"
+    canonical_field_id: ""
+ 
+questionnaire_fields:
+  - paper_label: "If you have selected any of the above, please provide applicable details"
+    question_code: "AMH_C_applicable_details"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 41
+    response_type: "TXT"
+    canonical_field_id: ""
+  
+questionnaire_fields:
+  - paper_label: "Activity Restrictions"
+    question_code: "AMH_C_activity_restrictions"
+    google_sheet_tab: "ques_abbreviated_medical_history_cooper"
+    google_sheet_row: 43
+    response_type: "TXT"
+    canonical_field_id: ""
+
+api_targets:
+  - paper_label: "Recommended Dietary Guidelines"
+    questionnaire_code: "AMH_C"
+    question_code: "AMH_C_dietary_guidelines"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_dietary_guidelines"
+
+api_targets:
+  - paper_label: "If you have selected any of the above, please provide applicable details"
+    questionnaire_code: AMH_C"
+    question_code: "AMH_C_applicable_details"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_applicable_details"
+
+api_targets:
+  - paper_label: "Activity Restrictions"
+    questionnaire_code: "AMH_C"
+    question_code: "AMH_C_activity_restrictions"
+    api_model: "QuestionnaireResponse"
+    api_field_path: "linkID: AMH_C_activity_restrictions"
