@@ -58,7 +58,7 @@ api_targets:
 
 api_targets:
   - paper_label: "If you have selected any of the above, please provide applicable details"
-    questionnaire_code: AMH_C"
+    questionnaire_code: "AMH_C"
     question_code: "AMH_C_applicable_details"
     api_model: "QuestionnaireResponse"
     api_field_path: "linkID: AMH_C_applicable_details"
