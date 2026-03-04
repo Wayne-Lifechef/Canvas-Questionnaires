@@ -1,7 +1,7 @@
-FormField(
+            FormField(
                 key='Insurance_Core_Last_Eligibility_Check_Date',
                 label='Insurance: Last Eligibility Check Date',
-                type=InputType.TEXT,
+                type=InputType.DATE,
                 required=False,
                 editable=True
             ),
@@ -85,14 +85,14 @@ FormField(
             FormField(
                 key='Insurance_MNT_Coverage_Start_Date',
                 label='Insurance: MNT Coverage Start Date',
-                type=InputType.TEXT,
+                type=InputType.DATE,
                 required=False,
                 editable=True
             ),
             FormField(
                 key='Insurance_MNT_Coverage_End_Date',
                 label='Insurance: MNT Coverage End Date',
-                type=InputType.TEXT,
+                type=InputType.DATE,
                 required=False,
                 editable=True
             ),
@@ -120,14 +120,14 @@ FormField(
             FormField(
                 key='Insurance_MTM_Coverage_Start_Date',
                 label='Insurance: MTM Coverage Start Date',
-                type=InputType.TEXT,
+                type=InputType.DATE,
                 required=False,
                 editable=True
             ),
             FormField(
                 key='Insurance_MTM_Coverage_End_Date',
                 label='Insurance: MTM Coverage End Date',
-                type=InputType.TEXT,
+                type=InputType.DATE,
                 required=False,
                 editable=True
             )
