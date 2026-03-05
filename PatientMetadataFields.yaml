@@ -1,5 +1,11 @@
-    def compute(self) -> list[Effect]:
         form = PatientMetadataCreateFormEffect(form_fields=[
+            FormField(
+                key='Profile_Sex_At_Birth',
+                label='Profile: Sex at Birth',
+                type=InputType.TEXT,
+                required=False,
+                editable=True
+            ),
             FormField(
                 key='I_C_Last_Eligibility_Check_Date',
                 label='Insurance: Last Eligibility Check Date',
