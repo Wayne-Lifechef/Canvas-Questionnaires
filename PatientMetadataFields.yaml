@@ -1,133 +1,136 @@
+    def compute(self) -> list[Effect]:
+        form = PatientMetadataCreateFormEffect(form_fields=[
             FormField(
-                key='Insurance_Core_Last_Eligibility_Check_Date',
+                key='I_C_Last_Eligibility_Check_Date',
                 label='Insurance: Last Eligibility Check Date',
                 type=InputType.DATE,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_Core_Checked_By',
+                key='I_C_Checked_By',
                 label='Insurance: Checked by',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_Core_OOP_Max',
+                key='I_C_OOP_Max',
                 label='Insurance: Out of Pocket Maximum',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_Core_OOP_Remaining',
+                key='I_C_OOP_Remaining',
                 label='Insurance: Out of Pocket Remaining',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_Diagnosis',
+                key='I_Diagnosis',
                 label='Insurance: Diagnosis',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Copay_Amount',
+                key='I_MNT_Copay_Amount',
                 label='Insurance: MNT Copay Amount',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Coverage %',
+                key='I_MNT_Coverage',
                 label='Insurance: MNT Coverage %',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Units_Available_Number',
+                key='I_MNT_Units_Available_Number',
                 label='Insurance: MNT Units Available Number',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Units_Limit_Number',
+                key='I_MNT_Units_Limit_Number',
                 label='Insurance: MNT Units Limit Number',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Deductible_Amount',
+                key='I_MNT_Deductible_Amount',
                 label='Insurance: MNT Deductible Amount',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Plan_Type',
+                key='I_MNT_Plan_Type',
                 label='Insurance: MNT Plan Type',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Authorization_Required',
+                key='I_MNT_Authorization_Required',
                 label='Insurance: MNT Authorization Required',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Coverage_Start_Date',
+                key='I_MNT_Coverage_Start_Date',
                 label='Insurance: MNT Coverage Start Date',
                 type=InputType.DATE,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MNT_Coverage_End_Date',
+                key='I_MNT_Coverage_End_Date',
                 label='Insurance: MNT Coverage End Date',
                 type=InputType.DATE,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MTM_Coverage_%',
+                key='I_MTM_Coverage_%',
                 label='Insurance: MTM Coverage %',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MTM_Meal_Limit_Number',
+                key='I_MTM_Meal_Limit_Number',
                 label='Insurance: MTM Meal Limit Number',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MTM_Meal_Limit_Period_Month_Year_Episode',
+                key='I_MTM_Meal_Limit_Period',
                 label='Insurance: MTM Meal Limit Period (Month, Year, Episode)',
                 type=InputType.TEXT,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MTM_Coverage_Start_Date',
+                key='I_MTM_Coverage_Start_Date',
                 label='Insurance: MTM Coverage Start Date',
                 type=InputType.DATE,
                 required=False,
                 editable=True
             ),
             FormField(
-                key='Insurance_MTM_Coverage_End_Date',
+                key='I_MTM_Coverage_End_Date',
                 label='Insurance: MTM Coverage End Date',
                 type=InputType.DATE,
                 required=False,
                 editable=True
             )
+        ])
