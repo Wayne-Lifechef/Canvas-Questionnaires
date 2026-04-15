@@ -29,17 +29,41 @@ profile_fields:
     canvas_model: "Patient"
     canvas_field: "Date of Birth"
     existing_field: true
-         
-  - paper_label: "Email"
+
+  - paper_label: "Weight"
     canonical_field_id: ""
-    canvas_model: "Patient"
-    canvas_field: "Email"
+    canvas_model: "Observation"
+    canvas_field: "Weight"
     existing_field: true
-    
-  - paper_label: "Mobile Phone Number"
+
+  - paper_label: "Height"
+    canonical_field_id: ""
+    canvas_model: "Observation"
+    canvas_field: "Height"
+    existing_field: true
+
+  - paper_label: "What sex were you assigned at birth"
     canonical_field_id: ""
     canvas_model: "Patient"
-    canvas_field: "Phone Numbers"
+    canvas_field: "Sex at Birth"
+    existing_field: true
+
+  - paper_label: "What is your current gender identity"
+    canonical_field_id: ""
+    canvas_model: "Patient"
+    canvas_field: "Gender Identity"
+    existing_field: true
+
+  - paper_label: "Emergency Contact - Full Name"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Name"
+    existing_field: true
+
+  - paper_label: "Emergency Contact - Phone Number"
+    canonical_field_id: ""
+    canvas_model: "Patient.contact"
+    canvas_field: "Name"
     existing_field: true
     
   - paper_label: "Street Address"
@@ -71,13 +95,26 @@ profile_fields:
     canvas_model: "Patient"
     canvas_field: "zip code"
     existing_field: true
+
+  - paper_label: "Mobile Phone Number"
+    canonical_field_id: ""
+    canvas_model: "Patient"
+    canvas_field: "Phone Numbers"
+    existing_field: true    
+    
+  - paper_label: "Email"
+    canonical_field_id: ""
+    canvas_model: "Patient"
+    canvas_field: "Email"
+    existing_field: true
+
     
 questionnaire_fields:
-  - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
-    question_code: "NNSS_primary_90d"
-    google_sheet_tab: "ques_navigator_nutrition_support_screening"
+  - paper_label: "Pronouns"
+    question_code: "pronouns"
+    google_sheet_tab: "ques_pronouns"
     google_sheet_row: 6
-    response_type: "SING"
+    response_type: "TXT"
     canonical_field_id: ""
 
 api_targets:
