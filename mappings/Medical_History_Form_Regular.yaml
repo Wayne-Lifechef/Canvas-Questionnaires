@@ -110,6 +110,9 @@ profile_fields:
 
     
 questionnaire_fields:
+## Pronouns is stored in a side questionnaire
+## google_sheet_url: "https://docs.google.com/spreadsheets/d/1vU3pQ_Z7JyK6UIZiZsnIyRI5uDx7RKXULuRATNvdF8k/edit?gid=1380530618#gid=1380530618"
+## google_sheet_tab: "ques_pronouns"
   - paper_label: "Pronouns"
     question_code: "pronouns"
     google_sheet_tab: "ques_pronouns"
@@ -117,6 +120,57 @@ questionnaire_fields:
     response_type: "TXT"
     canonical_field_id: ""
 
+  - paper_label: "Date of last physical exam"
+    question_code: "JMH_last_exam"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 6
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Primary Care Physician"
+    question_code: "JMH_pcp"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 8
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Personal Health History"
+    question_code: "JMH_health_history"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 10
+    response_type: "MULT"
+    canonical_field_id: ""
+
+  - paper_label: "Additional Details (Personal)"
+    question_code: "JMH_hh_additional"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 34
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Additional Details (Personal)"
+    question_code: "JMH_hh_additional"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 34
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Additional Details (Personal)"
+    question_code: "JMH_hh_additional"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 34
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Additional Details (Personal)"
+    question_code: "JMH_hh_additional"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 34
+    response_type: "TXT"
+    canonical_field_id: ""
+
+#MEDICATIONS FLIPS BACK TO MODULES
+    
 api_targets:
   - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
     questionnaire_code: "NNSS"
