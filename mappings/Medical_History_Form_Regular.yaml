@@ -266,121 +266,121 @@ questionnaire_fields:
     canonical_field_id: ""
  
   - paper_label: "Are there foods you avoid because you don't like them"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_avoided_foods"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 87
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "Are there any foods that noticably cause stomach pains or negative symptoms"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_stomach_aches"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 89
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "Please describe a typical day at your job.."
-    question_code: "JMH_who_plans"
+    question_code: "JMH_typical_work_day"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 91
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "What type of movement do you participate in regularly and how often.."
-    question_code: "JMH_who_plans"
+    question_code: "JMH_regular_movement"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 93
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "On a scale of 0 - 5 how important.. weight loss"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_weight_loss"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 95
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "On a scale of 0 - 5 how important.. muscle gain"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_muscle_gain"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 97
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "On a scale of 0 - 5 how important.. sports performance"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_sports_performance"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 99
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "On a scale of 0 - 5 how important.. health improvement"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_health_improvement"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 101
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "Rate your average level of stress"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_Stress_Level"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 103
     response_type: "SING"
     canonical_field_id: ""
 
   - paper_label: "How do you typically manage stress"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_manage_stress"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 109
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "Select the option that best represents your average sleep duration"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_sleep_duration"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 111
     response_type: "SING"
     canonical_field_id: ""
 
   - paper_label: "Rate your sleep quality"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_sleep_quality"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 117
     response_type: "SING"
     canonical_field_id: ""
 
   - paper_label: "Describe your bowel movement frequency and ease of passing.."
-    question_code: "JMH_who_plans"
+    question_code: "JMH_bowel_movement_frequency"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 123
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "What are your long term health goals"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_long_term_health_goals"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 125
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "What short term goal would you like to accomplish in the next 10 weeks.."
-    question_code: "JMH_who_plans"
+    question_code: "JMH_short_term_health_goals"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 127
     response_type: "TXT"
     canonical_field_id: ""
 
   - paper_label: "How can your dietitian best help you learn and support you.."
-    question_code: "JMH_who_plans"
+    question_code: "JMH_how_can_we_help"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 129
     response_type: "MULT"
     canonical_field_id: ""
     
   - paper_label: "Why is making this step towards better health and nutritian most important to you"
-    question_code: "JMH_who_plans"
+    question_code: "JMH_why_is_this_important"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 82
+    google_sheet_row: 136
     response_type: "TXT"
     canonical_field_id: ""
 
