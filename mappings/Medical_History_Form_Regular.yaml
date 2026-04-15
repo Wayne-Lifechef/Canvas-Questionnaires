@@ -108,6 +108,25 @@ profile_fields:
     canvas_field: "Email"
     existing_field: true
 
+  - paper_label: "Current Medications"
+    canonical_field_id: ""
+    canvas_model: "MedicationStatement"
+    canvas_field: "Medications"
+    existing_field: true
+
+  - paper_label: "Current Supplements"
+    canonical_field_id: ""
+    canvas_model: "MedicationStatement"
+    canvas_field: "Medications"
+    existing_field: true
+
+  - paper_label: "Allergies"
+    canonical_field_id: ""
+    canvas_model: "AllergyIntolerance"
+    canvas_field: "Allergies"
+    existing_field: true
+
+
     
 questionnaire_fields:
 ## Pronouns is stored in a side questionnaire
@@ -148,29 +167,158 @@ questionnaire_fields:
     response_type: "TXT"
     canonical_field_id: ""
 
-  - paper_label: "Additional Details (Personal)"
-    question_code: "JMH_hh_additional"
+  - paper_label: "Family Health History"
+    question_code: "JMH_family_history"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 34
+    google_sheet_row: 36
+    response_type: "MULTI"
+    canonical_field_id: ""
+
+  - paper_label: "Additional Details (Family)"
+    question_code: "JMH_fh_other"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 58
     response_type: "TXT"
     canonical_field_id: ""
 
-  - paper_label: "Additional Details (Personal)"
-    question_code: "JMH_hh_additional"
+  - paper_label: "Date of last period"
+    question_code: "JMH_period"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 34
+    google_sheet_row: 60
     response_type: "TXT"
     canonical_field_id: ""
 
-  - paper_label: "Additional Details (Personal)"
-    question_code: "JMH_hh_additional"
+  - paper_label: "Regular periods"
+    question_code: "JMH_regular_periods"
     google_sheet_tab: "ques_jotform_medical_history"
-    google_sheet_row: 34
+    google_sheet_row: 62
     response_type: "TXT"
     canonical_field_id: ""
 
-#MEDICATIONS FLIPS BACK TO MODULES
-    
+  - paper_label: "Breakfast"
+    question_code: "JMH_breakfast"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 64
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Lunch"
+    question_code: "JMH_lunch"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 66
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Dinner"
+    question_code: "JMH_dinner"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 68
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Snacks"
+    question_code: "JMH_snacks"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 70
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Beverages"
+    question_code: "JMH_beverages"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 72
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "How many times are you able to sit down and eat.."
+    question_code: "JMH_sit_and_eat"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 74
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Skip Meals"
+    question_code: "JMH_skip_meals"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 76
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Do you drink any alcohol"
+    question_code: "JMH_alcohol"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 80
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Would you like information about medically tailored meals"
+    question_code: "JMH_meals"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 84
+    response_type: "SING"
+    canonical_field_id: ""
+ 
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+  - paper_label: "Who plans the meals/buys the food/Prepares the food"
+    question_code: "JMH_who_plans"
+    google_sheet_tab: "ques_jotform_medical_history"
+    google_sheet_row: 82
+    response_type: "TXT"
+    canonical_field_id: ""
+
+
+
+
+
+
 api_targets:
   - paper_label: "Will the patient's primary address be their physical location for the next 90 days?"
     questionnaire_code: "NNSS"
